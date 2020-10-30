@@ -1,0 +1,26 @@
+{
+  "name": "expressjs-couchdb-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate Repo for starting up with CouchDB and ExpressJS",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edwinclement08/expressjs-couchdb-boilerplate.git"
+  },
+  "author": "Edwin Clement <edwinclement08@gmail.com> (https://blog.edwinclement08.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edwinclement08/expressjs-couchdb-boilerplate/issues"
+  },
+  "homepage": "https://github.com/edwinclement08/expressjs-couchdb-boilerplate#readme"
+}
