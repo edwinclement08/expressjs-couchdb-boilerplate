@@ -4,7 +4,7 @@
   "description": "A boilerplate Repo for starting up with CouchDB and ExpressJS",
   "private": true,
   "scripts": {
-    "start": "nodemon --inspect=0.0.0.0 ./bin/www",
+    "start": "sh dev_startup.sh ",
     "start:prod": "node ./bin/www",
     "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix",
     "lint": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix"
@@ -20,6 +20,7 @@
     ]
   },
   "dependencies": {
+    "better-module-alias": "^1.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
@@ -46,5 +47,10 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.5.0",
     "prettier": "^2.1.2"
+  },
+  "_moduleAliases": {
+    "$services": "./services",
+    "$routes": "./routes",
+    "$utils": "./utils"
   }
 }

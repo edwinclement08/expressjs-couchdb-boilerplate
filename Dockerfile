@@ -1,14 +1,22 @@
 FROM node:14-alpine
 
+RUN apk add git
+
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
 RUN npm install -g nodemon
 
-WORKDIR /usr/src/app
+RUN mkdir -p /usr/src/_temp
+
+WORKDIR /usr/src/_temp
 
 COPY package*.json ./
-RUN npm install
+RUN npm ci
+
+WORKDIR /usr/src/app
+
+RUN ln -s /usr/src/_temp/node_modules /usr/src/app/node_modules
 
 COPY . .
 
