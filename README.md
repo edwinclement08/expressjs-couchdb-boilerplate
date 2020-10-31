@@ -1,6 +1,8 @@
 Steps to do this
 
-- Setup deploy key(https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys) for the server
+Install docker
+
+run `make dev up`
 
 For Production
 

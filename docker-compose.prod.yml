@@ -6,13 +6,15 @@ services:
     ports:
       - 80:3000
     env_file: .env.prod
-    environment: 
+    environment:
       - NODE_ENV=production
+    restart: unless-stopped
 
   couchdb:
     image: couchdb:3
     env_file: .env.prod
-    volumes: 
+    volumes:
       - ./data:/opt/couchdb/data
     ports:
       - 5984:5984
+    restart: unless-stopped
