@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    env_file: .env.dev
+    ports:
+      - 3000:3000
+      - 9229:9229
+    command: npm start
+
+  couchdb:
+    image: couchdb:3
+    env_file: .env.dev
+    volumes: 
+      - ./data:/opt/couchdb/data
+      - ./couchdb/local.ini:/usr/local/etc/couchdb
+    ports:
+      - 5984:5984

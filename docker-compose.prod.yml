@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - 80:3000
+    env_file: .env.prod
+    environment: 
+      - NODE_ENV=production
+
+  couchdb:
+    image: couchdb:3
+    env_file: .env.prod
+    volumes: 
+      - ./data:/opt/couchdb/data
+    ports:
+      - 5984:5984
