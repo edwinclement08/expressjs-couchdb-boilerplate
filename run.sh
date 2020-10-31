@@ -11,7 +11,7 @@ if [[ $# -ne 3  ]] ; then
   echo 'Invalid call, The proper call format is:'
   echo './run.sh environment service argument'
   echo 'Available env: dev, prod'
-  echo 'Available env: check docker-compose for the given env'
+  echo 'Available service: check docker-compose.yml.* for the services available'
   exit 1
 fi
 # echo "Environment is: [$1]"
