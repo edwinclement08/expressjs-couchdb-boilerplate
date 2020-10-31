@@ -6,3 +6,11 @@ Steps to do this
 For Production
 * Copy over .env.dev to .env.prod for setting up the secrets for production
 
+
+* VScode
+
+Need eslint(https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and prettier(https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) 
+
+add
+"editor.formatOnSave": true 
+to settings
