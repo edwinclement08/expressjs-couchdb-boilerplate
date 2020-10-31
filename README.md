@@ -20,3 +20,16 @@ to settings
 
 Troubleshooting,
 in case Npm ci fails in docker, run npm install in local folder to sync the lock files
+
+# Help
+
+run `make` to get the available run options
+
+run `make dev up` for starting in dev mode
+run `make prod up` for starting in prod mode
+
+run `make dev down` for stopping dev env
+
+`make dev logs` or `make logs` show logs of the nodejs container of the given env
+
+`make dev getshell` or `make getshell` show logs of the nodejs container of the given env

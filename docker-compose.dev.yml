@@ -15,7 +15,7 @@ services:
   couchdb:
     image: couchdb:3
     env_file: .env.dev
-    volumes: 
+    volumes:
       - ./data:/opt/couchdb/data
       - ./couchdb/local.ini:/usr/local/etc/couchdb
     ports:
