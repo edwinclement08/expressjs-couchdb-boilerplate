@@ -59,7 +59,7 @@ down: ## [ACTION] bring down the app
 # utility functions
 getshell: ## [TOOL] get shell into the $(project_name) container
 	@echo "getting a shell into (`docker ps --format "table {{.ID}}\t{{.Image}}" | grep '$(PROJECT_NAME)' | sed 's/ [ ]*/ -- /g' `)"
-	@docker exec -it `docker ps --format "table {{.ID}}\t{{.Image}}" | grep '$(PROJECT_NAME)' | cut -d " " -f 1` bash || sh
+	@docker exec -it `docker ps --format "table {{.ID}}\t{{.Image}}" | grep '$(PROJECT_NAME)' | cut -d " " -f 1` sh
 
 logs: ## [TOOL] Tail the running log of the backend server
 	@source ./.environ && echo "Getting Logs Environment: $$ENVIRON"
